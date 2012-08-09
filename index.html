@@ -10,7 +10,17 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Oasis-chex by brianseitel</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="oasis.chex.js"></script>
+
+	<script>
+	    $(document).ready(function() {
+	        var chex = new Oasis.Chex($('#album'), {title: "Incredible Machine by Sugarland" });
+	    });
+	</script>	
+	<link href="oasis.chex.css" rel="stylesheet">
+    <title>Chex: An Oasis Project by Brian Seitel</title>
   </head>
 
   <body>
@@ -18,7 +28,7 @@
       <div class="inner">
 
         <header>
-          <h1>Oasis-chex</h1>
+          <h1>Chex: an Oasis Project by Brian Seitel</h1>
           <h2>A jQuery-based checkbox alternative UI.</h2>
         </header>
 
@@ -31,33 +41,76 @@
         <hr>
 
         <section id="main_content">
-          <h3>Welcome to GitHub Pages.</h3>
+        	<h3>Oasis Chex Demo</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+        	<p>Sometimes when we have a huge wall of checkboxes, it can get overwhelming. That's where Chex comes in: to simplify your checkboxes into a sexy, easy-to-use interface. Setting it up is a breeze, too. Check it out:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+        	<h4>Demo</h4>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+			<p>Turn this:</p>
 
-<h3>Designer Templates</h3>
+			<div class="no-float"
+				<input type="checkbox" name="song[1]" data-name="All We Are"> <label>All We Are</label>
+			    <input type="checkbox" name="song[2]" data-name="Incredible Machine"> <label>Incredible Machine</label>
+			    <input type="checkbox" name="song[3]" data-name="Stuck Like Glue"> <label>Stuck Like Glue</label>
+			    <input type="checkbox" name="song[4]" data-name="Tonight"> <label>Tonight</label>
+			    <input type="checkbox" name="song[5]" data-name="Stand Up"> <label>Stand Up</label>
+			    <input type="checkbox" name="song[6]" data-name="Incredible Machine"> <label>Incredible Machine</label>
+			    <input type="checkbox" name="song[7]" data-name="Every Girl Like Me"> <label>Every Girl Like Me</label>
+			    <input type="checkbox" name="song[8]" data-name="Little Miss"> <label>Little Miss</label>
+			    <input type="checkbox" name="song[9]" data-name="Find the Beat Again"> <label>Find the Beat Again</label>
+			    <input type="checkbox" name="song[10]" data-name="Wide Open"> <label>Wide Open</label>
+			    <input type="checkbox" name="song[11]" data-name="Shine the Light"> <label>Shine the Light</label>
+			</div>
+			<br/>
+			<p>into this:</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+			<div id="album">
+			    <input type="checkbox" name="song[1]" data-name="All We Are"> <label>All We Are</label>
+			    <input type="checkbox" name="song[2]" data-name="Incredible Machine"> <label>Incredible Machine</label>
+			    <input type="checkbox" name="song[3]" data-name="Stuck Like Glue"> <label>Stuck Like Glue</label>
+			    <input type="checkbox" name="song[4]" data-name="Tonight"> <label>Tonight</label>
+			    <input type="checkbox" name="song[5]" data-name="Stand Up"> <label>Stand Up</label>
+			    <input type="checkbox" name="song[6]" data-name="Incredible Machine"> <label>Incredible Machine</label>
+			    <input type="checkbox" name="song[7]" data-name="Every Girl Like Me"> <label>Every Girl Like Me</label>
+			    <input type="checkbox" name="song[8]" data-name="Little Miss"> <label>Little Miss</label>
+			    <input type="checkbox" name="song[9]" data-name="Find the Beat Again"> <label>Find the Beat Again</label>
+			    <input type="checkbox" name="song[10]" data-name="Wide Open"> <label>Wide Open</label>
+			    <input type="checkbox" name="song[11]" data-name="Shine the Light"> <label>Shine the Light</label>
+			</div>
 
-<h3>Rather Drive Stick?</h3>
+		<br/>
+		<h4>Include the Javascript and CSS files. Note: this requires jQuery.</h4>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+		<pre><code>&lt;script src="oasis.chex.js">&lt;/script>
+&lt;script src="jquery-latest.js">&lt;/script>
 
-<h3>Authors and Contributors</h3>
+&lt;link href="oasis.chex.css" rel="stylesheet"></code></pre>				
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+		<p>Set up your checkboxes</p>
 
-<h3>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
+<pre><code>&lt;div id="album">
+    &lt;input type="checkbox" name="song[1]" data-name="All We Are"> &lt;label>All We Are&lt;/label>
+    &lt;input type="checkbox" name="song[2]" data-name="Incredible Machine"> &lt;label>Incredible Machine&lt;/label>
+    &lt;input type="checkbox" name="song[3]" data-name="Stuck Like Glue"> &lt;label>Stuck Like Glue&lt;/label>
+    &lt;input type="checkbox" name="song[4]" data-name="Tonight"> &lt;label>Tonight&lt;/label>
+    &lt;input type="checkbox" name="song[5]" data-name="Stand Up"> &lt;label>Stand Up&lt;/label>
+    &lt;input type="checkbox" name="song[6]" data-name="Incredible Machine"> &lt;label>Incredible Machine&lt;/label>
+    &lt;input type="checkbox" name="song[7]" data-name="Every Girl Like Me"> &lt;label>Every Girl Like Me&lt;/label>
+    &lt;input type="checkbox" name="song[8]" data-name="Little Miss"> &lt;label>Little Miss&lt;/label>
+    &lt;input type="checkbox" name="song[9]" data-name="Find the Beat Again"> &lt;label>Find the Beat Again&lt;/label>
+    &lt;input type="checkbox" name="song[10]" data-name="Wide Open"> &lt;label>Wide Open&lt;/label>
+    &lt;input type="checkbox" name="song[11]" data-name="Shine the Light"> &lt;label>Shine the Light&lt;/label>
+&lt;/div></code></pre>		
+
+		<p>Instantiate Chex</p>
+
+<pre><code>&lt;script>
+    $(document).ready(function() {
+        var chex = new Oasis.Chex($('#album'), {title: "Incredible Machine by Sugarland" });
+    });
+&lt;/script></code></pre>
 
         <footer>
           Oasis-chex is maintained by <a href="https://github.com/brianseitel">brianseitel</a><br>
