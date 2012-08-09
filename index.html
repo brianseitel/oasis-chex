@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Oasis - Chex Demo</title>
+		<script src="oasis.chex.js"></script>
+		<script src="jquery-latest.js"></script>
+		<link href="oasis.chex.css" rel="stylesheet"/>
+
+		<script>
+			$(document).ready(function() {
+				var chex = new Oasis.Chex($('#mix'), { title: "Incredible Machine by Sugarland"});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Oasis Chex Demo</h1>
+			<p>Sometimes when we have a huge wall of checkboxes, it can get overwhelming. That's where Chex comes in: to simplify your checkboxes into a sexy, easy-to-use interface. Setting it up is a breeze, too. Check it out:</p>
+
+			<h4>Demo</h4>
+			<p>Turn this:</p>
+			<div class="no-float">
+				<input type="checkbox" name="song[1]" data-name="All We Are" autocomplete="off"/> <label>All We Are</label>
+				<input type="checkbox" name="song[2]" data-name="Incredible Machine" autocomplete="off"/> <label>Incredible Machine</label>
+				<input type="checkbox" name="song[3]" data-name="Stuck Like Glue" autocomplete="off"/> <label>Stuck Like Glue</label>
+				<input type="checkbox" name="song[4]" data-name="Tonight" autocomplete="off"/> <label>Tonight</label>
+				<input type="checkbox" name="song[5]" data-name="Stand Up" autocomplete="off"/> <label>Stand Up</label>
+				<input type="checkbox" name="song[6]" data-name="Incredible Machine (Interlude)" autocomplete="off"/> <label>Incredible Machine (Interlude)</label>
+				<input type="checkbox" name="song[7]" data-name="Every Girl Like Me" autocomplete="off"/> <label>Every Girl Like Me</label>
+				<input type="checkbox" name="song[8]" data-name="Little Miss" autocomplete="off"/> <label>Little Miss</label>
+				<input type="checkbox" name="song[9]" data-name="Find the Beat Again" autocomplete="off"/> <label>Find the Beat Again</label>
+				<input type="checkbox" name="song[10]" data-name="Wide Open" autocomplete="off"/> <label>Wide Open</label>
+				<input type="checkbox" name="song[11]" data-name="Shine the Light" autocomplete="off"/> <label>Shine the Light</label>
+			</div>
+
+			<p>into this:</p>
+
+			<div id="mix">
+				<input type="checkbox" name="song[1]" data-name="All We Are" autocomplete="off"/> <label>All We Are</label>
+				<input type="checkbox" name="song[2]" data-name="Incredible Machine" autocomplete="off"/> <label>Incredible Machine</label>
+				<input type="checkbox" name="song[3]" data-name="Stuck Like Glue" autocomplete="off"/> <label>Stuck Like Glue</label>
+				<input type="checkbox" name="song[4]" data-name="Tonight" autocomplete="off"/> <label>Tonight</label>
+				<input type="checkbox" name="song[5]" data-name="Stand Up" autocomplete="off"/> <label>Stand Up</label>
+				<input type="checkbox" name="song[6]" data-name="Incredible Machine (Interlude)" autocomplete="off"/> <label>Incredible Machine (Interlude)</label>
+				<input type="checkbox" name="song[7]" data-name="Every Girl Like Me" autocomplete="off"/> <label>Every Girl Like Me</label>
+				<input type="checkbox" name="song[8]" data-name="Little Miss" autocomplete="off"/> <label>Little Miss</label>
+				<input type="checkbox" name="song[9]" data-name="Find the Beat Again" autocomplete="off"/> <label>Find the Beat Again</label>
+				<input type="checkbox" name="song[10]" data-name="Wide Open" autocomplete="off"/> <label>Wide Open</label>
+				<input type="checkbox" name="song[11]" data-name="Shine the Light" autocomplete="off"/> <label>Shine the Light</label>
+			</div>
+
+			<h4>Include the Javascript and CSS files. Note: this requires jQuery.</h4>
+			<pre>
+&lt;script src="oasis.chex.js"&gt;&lt;/script&gt;
+&lt;script src="jquery-latest.js"&gt;&lt;/script&gt;
+
+&lt;link href="oasis.chex.css" rel="stylesheet"&gt;
+			</pre>
+
+			<h4>Set up your checkboxes</h4>
+			<pre>
+&lt;div id="album"&gt;
+    &lt;input type="checkbox" name="song[1]" data-name="All We Are"&gt; &lt;label&gt;All We Are&lt;/label&gt;
+    &lt;input type="checkbox" name="song[2]" data-name="Incredible Machine"&gt; &lt;label&gt;Incredible Machine&lt;/label&gt;
+    &lt;input type="checkbox" name="song[3]" data-name="Stuck Like Glue"&gt; &lt;label&gt;Stuck Like Glue&lt;/label&gt;
+    &lt;input type="checkbox" name="song[4]" data-name="Tonight"&gt; &lt;label&gt;Tonight&lt;/label&gt;
+    &lt;input type="checkbox" name="song[5]" data-name="Stand Up"&gt; &lt;label&gt;Stand Up&lt;/label&gt;
+    &lt;input type="checkbox" name="song[6]" data-name="Incredible Machine"&gt; &lt;label&gt;Incredible Machine&lt;/label&gt;
+    &lt;input type="checkbox" name="song[7]" data-name="Every Girl Like Me"&gt; &lt;label&gt;Every Girl Like Me&lt;/label&gt;
+    &lt;input type="checkbox" name="song[8]" data-name="Little Miss"&gt; &lt;label&gt;Little Miss&lt;/label&gt;
+    &lt;input type="checkbox" name="song[9]" data-name="Find the Beat Again"&gt; &lt;label&gt;Find the Beat Again&lt;/label&gt;
+    &lt;input type="checkbox" name="song[10]" data-name="Wide Open"&gt; &lt;label&gt;Wide Open&lt;/label&gt;
+    &lt;input type="checkbox" name="song[11]" data-name="Shine the Light"&gt; &lt;label&gt;Shine the Light&lt;/label&gt;
+&lt;/div&gt;
+			</pre>
+
+			<h4>Instantiate Chex</h4>
+
+			<pre>
+&lt;script&gt;
+    $(document).ready(function() {
+        var chex = new Oasis.Chex($('#album'), {title: "Incredible Machine by Sugarland" });
+    });
+&lt;/script&gt;
+			</pre>
+		</div>
+	</body>
+</html>
