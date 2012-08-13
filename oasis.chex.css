@@ -1,5 +1,4 @@
-
-#oasis-chex-container { position: relative; }
+.oasis-chex-container { position: relative; }
 #oasis-chex-items { display:none; position: absolute; top: 25px; left: 0; width: 495px; max-height: 300px; min-height: 100px; overflow-x: hidden; overflow-y: auto; background: #FFF; border: 1px solid #CCC; box-shadow: 0 0 12px #666; }
 .oasis-chex-item { padding: 5px; border: 1px solid #EAEAEA; box-shadow: 0 0 1px #333; float: left; min-width: 235px}
 .oasis-chex-item.selected { background: #ABE850; color: #333; cursor: pointer; }
@@ -14,3 +13,8 @@
 .no-float { clear: both; overflow: hidden; }
 .no-float input { float: left; clear: left; }
 .no-float label { float: left; clear: none; }
+
+.oasis-chex-group { background: #ABE850; border: #ABE850; border-radius: 4px 4px 4px 4px; float: left; padding: 3px 8px;margin: 3px; list-style-type: none; cursor:pointer; opacity: 0.5; }
+.oasis-chex-group:hover { background: #91CE36; } 
+.oasis-chex-group.selected { background: #91CE36; opacity: 1; }
+.oasis-chex-group-bar { float: left; clear: both; width: 100%; }

@@ -17,6 +17,7 @@
 	<script>
 	    $(document).ready(function() {
 	        var chex = new Oasis.Chex($('#album'), {title: "Incredible Machine by Sugarland" });
+	        var chex2 = new Oasis.Chex($('#mix2'), {title: "Sugarland Discography" });
 	    });
 	</script>	
 	<link href="oasis.chex.css" rel="stylesheet">
@@ -111,6 +112,72 @@
         var chex = new Oasis.Chex($('#album'), {title: "Incredible Machine by Sugarland" });
     });
 &lt;/script></code></pre>
+
+
+			<h4>Grouping Items</h4>
+
+			<p>Sometimes you want to visually group your checkboxes together in semantic categories. For instance, our above example could be broken up into albums:</p>
+			<div id="mix2">
+				<div rel="chex-group" data-title="Incredible Machine">
+					<input type="checkbox" name="song[1]" data-name="All We Are" autocomplete="off"/> <label>All We Are</label>
+					<input type="checkbox" name="song[2]" data-name="Incredible Machine" autocomplete="off"/> <label>Incredible Machine</label>
+					<input type="checkbox" name="song[3]" data-name="Stuck Like Glue" autocomplete="off"/> <label>Stuck Like Glue</label>
+					<input type="checkbox" name="song[4]" data-name="Tonight" autocomplete="off"/> <label>Tonight</label>
+					<input type="checkbox" name="song[5]" data-name="Stand Up" autocomplete="off"/> <label>Stand Up</label>
+					<input type="checkbox" name="song[6]" data-name="Incredible Machine (Interlude)" autocomplete="off"/> <label>Incredible Machine (Interlude)</label>
+					<input type="checkbox" name="song[7]" data-name="Every Girl Like Me" autocomplete="off"/> <label>Every Girl Like Me</label>
+					<input type="checkbox" name="song[8]" data-name="Little Miss" autocomplete="off"/> <label>Little Miss</label>
+					<input type="checkbox" name="song[9]" data-name="Find the Beat Again" autocomplete="off"/> <label>Find the Beat Again</label>
+					<input type="checkbox" name="song[10]" data-name="Wide Open" autocomplete="off"/> <label>Wide Open</label>
+					<input type="checkbox" name="song[11]" data-name="Shine the Light" autocomplete="off"/> <label>Shine the Light</label>
+				</div>
+				<div rel="chex-group" data-title="Enjoy the Ride">
+					<input type="checkbox" name="song[1]" data-name="Settlin'" autocomplete="off"/> <label>All We Are</label>
+					<input type="checkbox" name="song[2]" data-name="County Line" autocomplete="off"/> <label>County Line</label>
+					<input type="checkbox" name="song[3]" data-name="Want To" autocomplete="off"/> <label>Want To</label>
+					<input type="checkbox" name="song[4]" data-name="Everyday America" autocomplete="off"/> <label>Everyday America</label>
+					<input type="checkbox" name="song[5]" data-name="Happy Ending" autocomplete="off"/> <label>Happy Ending</label>
+					<input type="checkbox" name="song[6]" data-name="These Are the Days" autocomplete="off"/> <label>These Are the Days</label>
+					<input type="checkbox" name="song[7]" data-name="One Blue Sky" autocomplete="off"/> <label>One Blue Sky</label>
+					<input type="checkbox" name="song[8]" data-name="April Showers" autocomplete="off"/> <label>April Showers</label>
+					<input type="checkbox" name="song[9]" data-name="Mean Girls" autocomplete="off"/> <label>Mean Girls</label>
+					<input type="checkbox" name="song[10]" data-name="Stay" autocomplete="off"/> <label>Stay</label>
+					<input type="checkbox" name="song[11]" data-name="Sugarland" autocomplete="off"/> <label>Sugarland</label>
+				</div>
+			</div>
+			<br/>
+			<p>which can be easily done by wrapping your categories in a div with a rel attribute of "chex-group", like so:</p>
+
+			<pre>
+&lt;div id="mix2">
+    &lt;div rel="chex-group" data-title="Incredible Machine">
+        &lt;input type="checkbox" name="song[1]" data-name="All We Are" />
+        &lt;input type="checkbox" name="song[2]" data-name="Incredible Machine" />
+        &lt;input type="checkbox" name="song[3]" data-name="Stuck Like Glue" />
+        &lt;input type="checkbox" name="song[4]" data-name="Tonight" />
+        &lt;input type="checkbox" name="song[5]" data-name="Stand Up" />
+        &lt;input type="checkbox" name="song[6]" data-name="Incredible Machine (Interlude)" />
+        &lt;input type="checkbox" name="song[7]" data-name="Every Girl Like Me" />
+        &lt;input type="checkbox" name="song[8]" data-name="Little Miss" />
+        &lt;input type="checkbox" name="song[9]" data-name="Find the Beat Again" />
+        &lt;input type="checkbox" name="song[10]" data-name="Wide Open" />
+        &lt;input type="checkbox" name="song[11]" data-name="Shine the Light" />
+    &lt;/div>
+    &lt;div rel="chex-group" data-title="Enjoy the Ride">
+        &lt;input type="checkbox" name="song[1]" data-name="Settlin'" />
+        &lt;input type="checkbox" name="song[2]" data-name="County Line" />
+        &lt;input type="checkbox" name="song[3]" data-name="Want To" />
+        &lt;input type="checkbox" name="song[4]" data-name="Everyday America" />
+        &lt;input type="checkbox" name="song[5]" data-name="Happy Ending" />
+        &lt;input type="checkbox" name="song[6]" data-name="These Are the Days" />
+        &lt;input type="checkbox" name="song[7]" data-name="One Blue Sky" />
+        &lt;input type="checkbox" name="song[8]" data-name="April Showers" />
+        &lt;input type="checkbox" name="song[9]" data-name="Mean Girls" />
+        &lt;input type="checkbox" name="song[10]" data-name="Stay" />
+        &lt;input type="checkbox" name="song[11]" data-name="Sugarland" />
+    &lt;/div>
+&lt;/div>
+			</pre>
 
         <footer>
           Oasis-chex is maintained by <a href="https://github.com/brianseitel">brianseitel</a><br>
